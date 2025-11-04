@@ -1,42 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Mapbox Web App</title>
+    <meta charset="utf-8" />
+    <title>PhD morphology tool</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.16.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.16.0/mapbox-gl.js"></script>
 
-  <!-- Mapbox GL JS -->
-  <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css" rel="stylesheet">
-  <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js"></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
 
-  <!-- Styles -->
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      font-family: Arial, sans-serif;
-    }
-    #map {
-      position: absolute;
-      top: 0; bottom: 0; width: 100%;
-    }
-    .header {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 8px 12px;
-      border-radius: 6px;
-      font-size: 14px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-    }
-  </style>
 </head>
 
 <body>
-  <div class="header">My Mapbox Web App</div>
-  <div id="map"></div>
+<div id="map"></div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWFobXVkdGFudG91c2giLCJhIjoiY2s3YXBsbWFuMTJsNDNmcGY3a2JtbjJ1YyJ9.C36ZOFTK74nfQnpqzE-xjw';
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mahmudtantoush/cmhkh7cz4000a01se238wdgaz', // stylesheet location
+        center: [-2.240,53.480], // starting position [lng, lat]
+        zoom: 15, // starting zoom
+        minZoom: 14,
+        renderingMode: '2d',
+        maxZoom: 20
+    // gm bounds [[53.4840,-2.3823],[53.1824,-1.7394]]
+    });
+    
+</script>
+
 </body>
-</html>
