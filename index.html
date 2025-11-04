@@ -38,27 +38,5 @@
 <body>
   <div class="header">My Mapbox Web App</div>
   <div id="map"></div>
-
-  <script>
-    // Replace with your public Mapbox access token
-    mapboxgl.accessToken = 'YOUR_MAPBOX_PUBLIC_TOKEN_HERE';
-
-    // Initialise the map
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v12',
-      center: [-2.24, 53.48], // Manchester
-      zoom: 11
-    });
-
-    // Add zoom and rotation controls
-    map.addControl(new mapboxgl.NavigationControl());
-
-    // Example marker
-    new mapboxgl.Marker()
-      .setLngLat([-2.24, 53.48])
-      .setPopup(new mapboxgl.Popup().setHTML('<b>Hello, Manchester!</b>'))
-      .addTo(map);
-  </script>
 </body>
 </html>
